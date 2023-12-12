@@ -1,0 +1,86 @@
+2023-11-18 08:48:34.890235-03:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]" [50000-222]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:418)
+	at school.sptech.App.main(App.java:19)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]" [50000-222]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 27 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 21 more
+2023-11-18 08:50:36.181498-03:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REGISTRO" not found; SQL statement:
+INSERT INTO Registro (nomeRegistro, valorRegitro) VALUES(?,?) [42102-222]
+2023-11-18 09:33:56.536320-03:00 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "REGISTRO" not found; SQL statement:
+INSERT INTO Registro (nomeRegistro, valorRegitro) VALUES(?,?) [42102-222]
+2023-11-19 21:23:38.760454-03:00 database: flush
+org.h2.message.DbException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]" [50000-222]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:326)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:53)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:291)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:2395)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:2381)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:2110)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:1563)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:418)
+	at school.sptech.App.main(App.java:21)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]" [50000-222]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 27 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/isaaa/Documents/Faculdade/Java/projeto-individual/banco_livros.mv.db [2.2.222/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 21 more
